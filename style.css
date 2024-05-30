@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+}
+header img{
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+header form {
+    line-height: 60px;
+}
+header p{
+    height: 30px;
+    background-color:  #FF3399;
+    color: white;
+    margin-top: 15px;
+    line-height: 30px;
+}
+header p:hover{
+    background-color: yellow;
+    color: red;
+}
+.menu{
+    width: vw;
+    top: 60px;
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1 ;
+}
+.menu .menu_1{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.menu .menu_1>li{
+    display: inline-block;
+    padding-left: 30px ;
+    padding-right: 30px;
+    position: relative;
+}
+.menu .menu_1 li a{
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    color: white;
+}
+.menu .menu_1 li:hover{
+    background-color:  #FF3399;
+}
+.menu_2{
+    background-color: aqua;
+    display: block;
+    width: 90px;
+    height: auto;
+    position: absolute;
+    left: 0; 
+    display: none; 
+    list-style: none;
+    text-align: center;
+}
+.menu li:hover .menu_2{
+    display: block; 
+    background-color: rgb(183, 216, 100);
+    color: black;
+}
+
