@@ -31,21 +31,21 @@ header p:hover{
     color: red;
 }
 .menu{
-    width: vw;
+    width: 134px;
     top: 60px;
     background-color: black;
-    height: 60px;
+    height: auto;
     position: fixed;
     left: 0;
     right: 0;
     z-index: 1 ;
 }
-.menu .menu_1{
-    margin-left: 100px;
-    margin-right: 100px;
-}
+/* .menu .menu_1{
+    margin-left: 10px;
+    margin-right: 10px;
+} */
 .menu .menu_1>li{
-    display: inline-block;
+    /* display: inline-block; */
     padding-left: 30px ;
     padding-right: 30px;
     position: relative;
@@ -55,17 +55,21 @@ header p:hover{
     display: block;
     line-height: 60px;
     color: white;
+    text-align: center;
 }
 .menu .menu_1 li:hover{
     background-color:  #FF3399;
 }
 .menu_2{
+    margin-right: 5px;
+    float: left;
     background-color: aqua;
     display: block;
     width: 90px;
     height: auto;
     position: absolute;
-    left: 0; 
+    left: 134px; 
+    top: 0;
     display: none; 
     list-style: none;
     text-align: center;
@@ -74,5 +78,27 @@ header p:hover{
     display: block; 
     background-color: rgb(183, 216, 100);
     color: black;
+}
+.content{
+    margin-left: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+.content img{
+    height: 400px;
+    width: 200px;
+}
+.content img:hover{
+    height: 500px;
+    width: 250px;
+}
+.content .list p{
+    text-align: center;
+    background-color:  #003366;
+    color: white;
+    padding: 10px 0;
+}
+.content .list p:hover{
+    background-color: #FFFF66;
 }
 
