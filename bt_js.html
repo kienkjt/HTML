@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm Từ Đặc Biệt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            margin: 0 auto;
+        }
+        td {
+            padding: 10px;
+        }
+        input[type="text"] {
+            width: 200px;
+        }
+        button {
+            margin: 5px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="return false;">
+            <table>
+                <tr>
+                    <td><label for="inputString">Nhập chuỗi:</label></td>
+                    <td><input type="text" id="inputString" maxlength="255"></td>
+                </tr>
+                <tr>
+                    <td><label for="result">Số từ có 4 ký tự:</label></td>
+                    <td><input type="text" id="result" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button onclick="countSpecialWords()">Tìm</button>
+                        <button onclick="clearInput()">Hủy bỏ</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        function countSpecialWords() {
+            // Lấy giá trị từ input
+            const inputString = document.getElementById('inputString').value;
+
+            // Tách chuỗi thành mảng các từ
+            const words = inputString.split(/\s+/);
+
+            // Đếm số từ có 4 ký tự và bắt đầu bằng chữ 'm'
+            let count = 0;
+            for (const word of words) {
+                if (word.length === 4 && word.charAt(0).toLowerCase() === 'm') {
+                    count++;
+                }
+            }
+
+            // Hiển thị kết quả
+            document.getElementById('result').value = count;
+        }
+
+        function clearInput() {
+            document.getElementById('inputString').value = '';
+            document.getElementById('result').value = '';
+        }
+    </script>
+</body>
+</html>
